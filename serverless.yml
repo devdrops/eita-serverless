@@ -1,0 +1,14 @@
+service: eita-serverless 
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+
+functions:
+  eita-giovana:
+    handler: eita.giovana
+    events:
+      - http:
+          method: get
+          path: /
+
